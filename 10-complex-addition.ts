@@ -233,10 +233,7 @@ module AdditionModule {
             ? Map2DArrayToNumber<Cast<CombinedResult, unknown[][]>> extends infer MappedResult
             ? ProcessCarry<Cast<MappedResult, number[]>> extends infer CarriedResult
             ? CarriedArrayToNumber<Cast<CarriedResult, number[]>>
-            : never
-            : never
-            : never
-            : never;
+            : typeof NaN : typeof NaN : typeof NaN : typeof NaN;
 
     type AdditionTest1 = Expect<Equality<
         Addition<123, 456>,
